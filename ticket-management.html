@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Management</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Ticket Dashboard</h1>
+    <button id="logout" class="btn">Logout</button>
+  </header>
+
+  <div class="container">
+    <h2>Create or Update Ticket</h2>
+    <form id="ticket-form">
+      <input type="text" id="ticket-title" placeholder="Ticket Title" required />
+      <select id="ticket-status" required>
+        <option value="">Select Status</option>
+        <option value="open">Open</option>
+        <option value="in_progress">In Progress</option>
+        <option value="closed">Closed</option>
+      </select>
+      <textarea id="ticket-desc" placeholder="Description"></textarea>
+      <button type="submit" class="btn">Save Ticket</button>
+    </form>
+
+    <h2>Your Tickets</h2>
+    <div id="tickets-container"></div>
+  </div>
+
+  <script src="js/ticket-management.js"></script>
+</body>
+</html>
